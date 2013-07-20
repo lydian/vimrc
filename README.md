@@ -81,6 +81,8 @@ PLUGINS
     `:Bookmark [name]` - bookmark any directory as name   
     `:NERDTree [name]` - open the bookmark [name] in Nerd Tree   
 
+* [vim-nerdtree-tabs] (https://github.com/jistr/vim-nerdtree-tabs): Work with nerdtree.
+
 * [AutoClose](http://www.vim.org/scripts/script.php?script_id=1849):  Inserts matching bracket, paren, brace or quote.
 
 * [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): deal with pairs of surroundings.
@@ -141,6 +143,9 @@ PLUGINS
   `:Ack [options] {pattern} [{directory}]`
 
 * [Git Gutter](https://github.com/airblade/vim-gitgutter): shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
+
+* [Fugitive](https://github.com/tpope/vim-fugitive): git wrapper for vim.
+
 
 Language specific supports
 --------------------------

@@ -22,7 +22,13 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
+set nu
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " disable auto comment 
+
+" code folding 
+set foldmethod=indent
+set foldlevel=99
 
 filetype off          " necessary to make ftdetect work on Linux
 syntax on
@@ -75,9 +81,12 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   "set softtabstop=2 
+   "set shiftwidth=2 
 
+   autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
+   autocmd FileType python,java set tabstop=4|set shiftwidth=4|set expandtab
+   autocmd FileType *.js setlocal shiftwidth=2 tabstop=2
    au FileType Makefile set noexpandtab
 "}      							
 
@@ -127,6 +136,9 @@ endfun
 " set leader to ,
 let mapleader=","
 let g:mapleader=","
+
+"toggle auto indent
+:set pastetoggle=<F3>
 
 "replace the current word in all opened buffers
 map <leader>r :call Replace()<CR>
@@ -317,6 +329,13 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
+" --- NerdTree
+" automatically open NerdTree
+"autocmd vimenter * NERDTree
+
+" --- NerdTree-Tab
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_focus_on_files=1
 
 " --- TagBar
 " toggle TagBar with F7
