@@ -1,8 +1,6 @@
-vgod's vimrc
+Lydian's vimrc
 ============
-Author: Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
-
-Fork me on GITHUB  https://github.com/vgod/vimrc.
+Fork From Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>  https://github.com/vgod/vimrc.
 
 ONE-STEP INSTALL
 ----------------
@@ -145,6 +143,10 @@ PLUGINS
 * [Git Gutter](https://github.com/airblade/vim-gitgutter): shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
 
 * [Fugitive](https://github.com/tpope/vim-fugitive): git wrapper for vim.
+
+* [Python Mode](https://github.com/klen/python-mode): allows you to use the pylint, rope, pydoc, pyflakes, pep8, mccabe libraries in vim to provide features like python code looking for bugs, refactoring and some other useful things.
+
+
 
 
 Language specific supports
