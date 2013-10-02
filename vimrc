@@ -77,18 +77,24 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
+  
+" Visualize TAB
+" highlight tabs and trailing spaces
+highlight SoftTab gui=underline guifg=blue ctermbg=blue
+match SoftTab / \{4\}/
+"
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
    "set softtabstop=2 
    "set shiftwidth=2 
 
    autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
-   autocmd FileType python,java set tabstop=4|set shiftwidth=4|set expandtab
+   autocmd FileType python,java set tabstop=4|set shiftwidth=4|set noexpandtab
+   autocmd FileType *.py set tabstop=4|set shiftwidth=4|set noexpandtab
    autocmd FileType *.js setlocal shiftwidth=2 tabstop=2
    au FileType Makefile set noexpandtab
 "}      							
-
+	
 " status line {
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
@@ -175,7 +181,7 @@ map <C-t><C-t> :tabnew<CR>
 map <C-t><C-w> :tabclose<CR> 
 
 " ,/ turn off search highlighting
-nmap <leader>/ :nohl<CR>
+nmap <leader>/ :noh<CR>
 
 " Bash like keys for the command line
 cnoremap <C-A>      <Home>
@@ -358,4 +364,4 @@ let g:gitgutter_enabled = 1
 " ---- python-mode
 let g:pymode_lint_write = 0  " Disable pylint checking every save
 set tags=./tags;/
-
+let g:pymode_syntax_indent_errors = 0 
