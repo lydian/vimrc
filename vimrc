@@ -88,13 +88,18 @@ match SoftTab / \{4\}/
    "set softtabstop=2 
    "set shiftwidth=2 
 
-   autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
-   autocmd FileType python,java set tabstop=4|set shiftwidth=4|set noexpandtab
-   autocmd FileType *.py set tabstop=4|set shiftwidth=4|set noexpandtab
+   autocmd FileType * setlocal tabstop=2|set shiftwidth=2|set noexpandtab
+   autocmd FileType python,java setlocal tabstop=4|set shiftwidth=4|set noexpandtab
+   autocmd FileType *.py setlocal tabstop=4|set shiftwidth=4|set noexpandtab
    autocmd FileType *.js setlocal shiftwidth=2 tabstop=2
    au FileType Makefile set noexpandtab
 "}      							
 	
+
+" Setup spell
+autocmd BufNewFile,BufRead *.txt setlocal spell 
+
+
 " status line {
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
