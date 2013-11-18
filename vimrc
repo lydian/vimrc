@@ -89,8 +89,8 @@ match SoftTab / \{4\}/
    "set shiftwidth=2 
 
    autocmd FileType * setlocal tabstop=2|set shiftwidth=2|set noexpandtab
-   autocmd FileType python,java setlocal tabstop=4|set shiftwidth=4|set noexpandtab
-   autocmd FileType *.py setlocal tabstop=4|set shiftwidth=4|set noexpandtab
+   autocmd FileType java setlocal tabstop=4|set shiftwidth=4|set expandtab
+   autocmd FileType python setlocal tabstop=4|set shiftwidth=4|set expandtab
    autocmd FileType *.js setlocal shiftwidth=2 tabstop=2
    au FileType Makefile set noexpandtab
 "}      							
