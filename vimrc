@@ -369,4 +369,21 @@ let g:gitgutter_enabled = 1
 " ---- python-mode
 let g:pymode_lint_write = 0  " Disable pylint checking every save
 set tags=./tags;/
-let g:pymode_syntax_indent_errors = 0 
+let g:pymode_syntax_indent_errors = 0
+
+" ---task-list
+nnoremap <leader>tl <Plug>TaskList
+
+"---revision history
+map <leader>g :GundoToggle<CR>
+
+"---pyflakes
+let g:pyflakes_use_quickfix = 0
+
+"---pep8
+let g:pep8_map='<leader>8'
+
+"---superTab
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+
